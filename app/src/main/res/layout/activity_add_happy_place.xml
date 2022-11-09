@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".AddHappyPlaceActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAddPlace"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="@dimen/top_bottom_spacing"
+        android:background="@color/green"
+        android:theme="@style/CustomToolbarStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titleTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right_input_text"
+                android:layout_marginRight="@dimen/margin_left_right_input_text"
+                android:layout_marginBottom="@dimen/margin_bottom_input_text"
+                app:boxStrokeColor="@color/green"
+                app:boxStrokeErrorColor="@color/red"
+                app:errorIconTint="@color/red"
+                app:errorTextColor="@color/red"
+                app:hintTextColor="@color/green">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/titleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/title"
+                    android:imeOptions="actionGo"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    android:textSize="@dimen/input_text_size"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right_input_text"
+                android:layout_marginRight="@dimen/margin_left_right_input_text"
+                android:layout_marginBottom="@dimen/margin_bottom_input_text"
+                app:boxStrokeColor="@color/green"
+                app:boxStrokeErrorColor="@color/red"
+                app:errorIconTint="@color/red"
+                app:errorTextColor="@color/red"
+                app:hintTextColor="@color/green">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/descriptionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/description"
+                    android:imeOptions="actionGo"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    android:textSize="@dimen/input_text_size"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dateTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right_input_text"
+                android:layout_marginRight="@dimen/margin_left_right_input_text"
+                android:layout_marginBottom="@dimen/margin_bottom_input_text"
+                app:boxStrokeColor="@color/green"
+                app:boxStrokeErrorColor="@color/red"
+                app:errorIconTint="@color/red"
+                app:errorTextColor="@color/red"
+                app:hintTextColor="@color/green">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/date"
+                    android:imeOptions="actionGo"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    android:textSize="@dimen/input_text_size"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/locationTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right_input_text"
+                android:layout_marginRight="@dimen/margin_left_right_input_text"
+                android:layout_marginBottom="@dimen/margin_bottom_input_text"
+                app:boxStrokeColor="@color/green"
+                app:boxStrokeErrorColor="@color/red"
+                app:errorIconTint="@color/red"
+                app:errorTextColor="@color/red"
+                app:hintTextColor="@color/green">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/locationText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/location"
+                    android:imeOptions="actionGo"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    android:textSize="@dimen/input_text_size"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right_input_text"
+                android:layout_marginTop="@dimen/margin_bottom_input_text"
+                android:layout_marginRight="@dimen/margin_left_right_input_text"
+                android:layout_marginBottom="@dimen/margin_bottom_input_text"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardElevation="@dimen/recycler_view_item_card_elevation">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/image_view_border"
+                        android:padding="@dimen/image_padding"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/add_screen_image_placeholder"
+                        tools:ignore="ImageContrastCheck" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_left_right_input_text"
+                    android:layout_marginRight="@dimen/margin_left_right_input_text"
+                    android:layout_weight="1.8"
+                    android:backgroundTint="@color/green"
+                    android:gravity="center"
+                    android:minWidth="@dimen/text_view_min_height"
+                    android:minHeight="@dimen/text_view_min_height"
+                    android:text="@string/add_image"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/input_text_size"
+                    android:textStyle="bold"
+                    tools:ignore="TextContrastCheck" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right_input_text"
+                android:layout_marginTop="@dimen/margin_bottom_input_text"
+                android:layout_marginRight="@dimen/margin_left_right_input_text"
+                android:layout_marginBottom="@dimen/top_bottom_spacing"
+                android:backgroundTint="@color/green"
+                android:minHeight="@dimen/save_button_min_height"
+                android:text="@string/save"
+                android:textColor="@color/background"
+                android:textSize="@dimen/input_text_size"
+                app:cornerRadius="@dimen/save_button_corner_radius"
+                tools:ignore="TextContrastCheck" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

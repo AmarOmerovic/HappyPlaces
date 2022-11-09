@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".DetailsHappyPlaceActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDetailPlace"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        android:theme="@style/CustomToolbarStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/background"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:layout_marginBottom="@dimen/margin_bottom_input_text"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    app:cardElevation="@dimen/recycler_view_item_card_elevation">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@color/background"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/image_padding"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/add_screen_image_placeholder"
+                        tools:ignore="ImageContrastCheck" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right_input_text"
+                android:layout_marginTop="@dimen/margin_bottom_input_text"
+                android:layout_marginRight="@dimen/margin_left_right_input_text"
+                android:layout_marginBottom="@dimen/margin_bottom_input_text"
+                android:gravity="center|start"
+                android:textColor="@color/green"
+                android:textSize="@dimen/detail_title_text_size"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck"
+                tools:text="Mt Everest" />
+
+            <TextView
+                android:id="@+id/descriptionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right_input_text"
+                android:layout_marginTop="@dimen/margin_bottom_input_text"
+                android:layout_marginRight="@dimen/margin_left_right_input_text"
+                android:layout_marginBottom="@dimen/margin_bottom_input_text"
+                android:gravity="center|start"
+                android:textColor="@color/detailTextColor"
+                android:textSize="@dimen/detail_description_text_size"
+                tools:text="Highest mountain on earth" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/viewOnMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right_input_text"
+                android:layout_marginTop="@dimen/margin_bottom_input_text"
+                android:layout_marginRight="@dimen/margin_left_right_input_text"
+                android:layout_marginBottom="@dimen/top_bottom_spacing"
+                android:backgroundTint="@color/green"
+                android:minHeight="@dimen/save_button_min_height"
+                android:text="@string/view_on_map"
+                android:textColor="@color/background"
+                android:textSize="@dimen/input_text_size"
+                app:cornerRadius="@dimen/save_button_corner_radius"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right_input_text"
+                android:layout_marginTop="@dimen/margin_bottom_input_text"
+                android:layout_marginRight="@dimen/margin_left_right_input_text"
+                android:layout_marginBottom="@dimen/margin_bottom_input_text"
+                android:gravity="center|end"
+                android:textColor="@color/detailTextColor"
+                android:textSize="@dimen/detail_description_text_size"
+                tools:text="11.02.2022" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

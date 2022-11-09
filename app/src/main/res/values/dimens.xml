@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_left_right_input_text">16dp</dimen>
+    <dimen name="margin_bottom_input_text">8dp</dimen>
+    <dimen name="top_bottom_spacing">20dp</dimen>
+    <dimen name="input_text_size">18sp</dimen>
+    <dimen name="save_button_corner_radius">6dp</dimen>
+    <dimen name="save_button_min_height">60dp</dimen>
+    <dimen name="image_border_stroke_size">1dp</dimen>
+    <dimen name="add_place_image_shape_radius">6dp</dimen>
+    <dimen name="image_padding">10dp</dimen>
+    <dimen name="text_view_min_height">60dp</dimen>
+    <dimen name="recycler_view_item_title_font">20sp</dimen>
+    <dimen name="recycler_view_item_description_font">16sp</dimen>
+    <dimen name="recycler_view_item_card_elevation">3dp</dimen>
+    <dimen name="recycler_view_item_image_width_height">80dp</dimen>
+    <dimen name="recycler_view_item_image_margin_start">3dp</dimen>
+    <dimen name="recycler_view_item_image_padding">3dp</dimen>
+    <dimen name="card_view_corner_radius_for_image">8dp</dimen>
+    <dimen name="detail_title_text_size">25sp</dimen>
+    <dimen name="detail_description_text_size">18sp</dimen>
+
+</resources>
