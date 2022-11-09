@@ -15,6 +15,7 @@ import com.amaromerovic.happyplaces.data.HappyPlaceApp
 import com.amaromerovic.happyplaces.data.HappyPlaceDAO
 import com.amaromerovic.happyplaces.databinding.ActivityMainBinding
 import com.amaromerovic.happyplaces.model.HappyPlaceModel
+import com.amaromerovic.happyplaces.util.Constants
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -53,10 +54,7 @@ class MainActivity : AppCompatActivity(), HappyPlaceRecyclerViewAdapter.OnHappyP
         lifecycleScope.launch {
             val happyPlace = happyPlaces[position]
             val intent = Intent(this@MainActivity, DetailsHappyPlaceActivity::class.java)
-            intent.putExtra("HappyPlaceTitleKey", happyPlace.title)
-            intent.putExtra("HappyPlaceDescriptionKey", happyPlace.description)
-            intent.putExtra("HappyPlaceDateKey", happyPlace.date)
-            intent.putExtra("HappyPlaceImageKey", happyPlace.imageUri)
+            intent.putExtra(Constants.OBJECT_KEY, happyPlace)
             startActivity(intent)
         }
     }
@@ -67,13 +65,8 @@ class MainActivity : AppCompatActivity(), HappyPlaceRecyclerViewAdapter.OnHappyP
                 val happyPlace = happyPlaces[viewHolder.adapterPosition]
                 if (i >= 8) {
                     val intent = Intent(this@MainActivity, AddHappyPlaceActivity::class.java)
-                    intent.putExtra("HappyPlaceIdKey", happyPlace.id)
-                    intent.putExtra("HappyPlaceTitleKey", happyPlace.title)
-                    intent.putExtra("HappyPlaceDescriptionKey", happyPlace.description)
-                    intent.putExtra("HappyPlaceDateKey", happyPlace.date)
-                    intent.putExtra("HappyPlaceImageKey", happyPlace.imageUri)
-                    intent.putExtra("HappyPlaceLocationKey", happyPlace.location)
-                    intent.putExtra("HappyPlaceDetails", true)
+                    intent.putExtra(Constants.OBJECT_KEY, happyPlace)
+                    intent.putExtra(Constants.DETAILS_LEY, true)
                     startActivity(intent)
                     binding.recyclerView.adapter?.notifyItemChanged(viewHolder.adapterPosition)
                 } else {
@@ -131,7 +124,7 @@ class MainActivity : AppCompatActivity(), HappyPlaceRecyclerViewAdapter.OnHappyP
                             actionTextView.setTextColor(
                                 ContextCompat.getColor(
                                     this@MainActivity,
-                                    R.color.green
+                                    R.color.blue
                                 )
                             )
                         }

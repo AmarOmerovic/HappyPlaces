@@ -3,6 +3,7 @@ package com.amaromerovic.happyplaces.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(tableName = "HappyPlacesTable")
 data class HappyPlaceModel(
@@ -23,5 +24,5 @@ data class HappyPlaceModel(
     var latitude: Double,
     @ColumnInfo(name = "Longitude")
     var longitude: Double
-) : java.io.Serializable {
+) : Serializable {
 }

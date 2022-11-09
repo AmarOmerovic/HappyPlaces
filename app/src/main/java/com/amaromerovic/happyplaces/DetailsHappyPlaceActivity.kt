@@ -1,9 +1,12 @@
 package com.amaromerovic.happyplaces
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.amaromerovic.happyplaces.databinding.ActivityDetailsHappyPlaceBinding
+import com.amaromerovic.happyplaces.model.HappyPlaceModel
+import com.amaromerovic.happyplaces.util.Constants
 
 class DetailsHappyPlaceActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailsHappyPlaceBinding
@@ -20,18 +23,28 @@ class DetailsHappyPlaceActivity : AppCompatActivity() {
             onBackPressedDispatcher.onBackPressed()
         }
 
-        val title = intent.getStringExtra("HappyPlaceTitleKey")
-        val description = intent.getStringExtra("HappyPlaceDescriptionKey")
-        val date = intent.getStringExtra("HappyPlaceDateKey")
-        val imageUri = intent.getStringExtra("HappyPlaceImageKey")
+        val happyPlace = Constants.getSerializable(
+            this@DetailsHappyPlaceActivity,
+            Constants.OBJECT_KEY,
+            HappyPlaceModel::class.java
+        )
 
-        if (title!!.isNotEmpty() && description!!.isNotEmpty() && date!!.isNotEmpty() && imageUri!!.isNotEmpty()) {
-            binding.titleText.text = title
-            binding.descriptionText.text = description
-            binding.dateText.text = date
-            binding.imageView.setImageURI(Uri.parse(imageUri))
+        binding.titleText.text = happyPlace.title
+        binding.descriptionText.text = happyPlace.description
+        binding.dateText.text = happyPlace.date
+        binding.imageView.setImageURI(Uri.parse(happyPlace.imageUri))
+
+
+        binding.viewOnMap.setOnClickListener {
+            val intent = Intent(this@DetailsHappyPlaceActivity, MapsActivity::class.java)
+            intent.putExtra(Constants.OBJECT_KEY, happyPlace)
+            startActivity(intent)
         }
 
 
     }
+
+
+
+
 }
